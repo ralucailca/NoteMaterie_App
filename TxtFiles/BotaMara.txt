@@ -1,0 +1,12 @@
+{Tema =1
+, Nota =7.5
+, Predata in saptamana =6
+, Deadline =3
+, Feedback =laborator bun
+}
+{Tema =4
+, Nota =8.7
+, Predata in saptamana =7
+, Deadline =9
+, Feedback =ok
+}

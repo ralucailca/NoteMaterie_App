@@ -1,0 +1,6 @@
+{Tema =1
+, Nota =8.5
+, Predata in saptamana =4
+, Deadline =3
+, Feedback =tema bine lucrata
+}

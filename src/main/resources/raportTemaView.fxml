@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="238.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RaportTemaController">
+   <children>
+      <TextArea fx:id="txtArea" layoutX="36.0" layoutY="86.0" prefHeight="111.0" prefWidth="530.0" />
+      <Label layoutX="189.0" layoutY="47.0" text="Cea mai dificilă temă este:" textFill="#6f0d0d">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

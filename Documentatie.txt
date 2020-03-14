@@ -1,0 +1,67 @@
+	Aplicație NoteMaterie_App:
+
+	Este o aplicație care ajută cadrele didactice să monitorizeze evaluarea temelor de laborator la disciplina MAP (Metode avansate de programare). 
+	Aplicația va permite înregistrarea unui feedback oferit studentului la adaugarea unei note la o anumită tema de laborator.
+	Filtrări și rapoarte cu privire la predarea și evaluarea temelor sunt de asemenea oferite utilizatorului.
+	Este folosită Metodologia de dezvoltare incrementală bazată pe funcționalități feature-driven development process (an 1, FP+POO).
+
+	Gestiunea resurselor: student, tema, nota, structuraAnUniv
+	Pentru fiecare resursă trebuie să avem posibilitatea să vizualizăm lista, să adăugam, să edităm și să ștergem resursa (Funcțiile CRUD – Create, Read, Update, Delete).
+	Atributele necesare fiecărei resurse ar putea fi:
+Student: ID, nume, prenume, grupa, email, cadruDidacticIndrumatorLab (String)
+Tema: ID, descriere, startWeek (Integer-nr saptamanii din cursul semetrului), deadlineWeek (Integer - numarul saptamanii din cursul sem reprezentand termenul de predare)
+Nota: ID, data, profesor, valoare, unde ID=ID_Student+ID_Tema (un student la o anumita tema are o singura nota)
+StructuraAnUniversitar: ID, anulUniversitar, sem1: StructuraSemestru, sem2:StructuraSemestru
+	Reprezentarea pentru resursa StructuraSemestru defineaște un semestru ca o reuniune de intervale calendaristice ce definesc cele 14 săptămâni.
+ 	StructuraAnUniv cuprinde structura celor două semestre. Aplicația ar trebui să funcționeze și în semestrul 2, pentru o altă disciplină.
+
+	Principalele funcționalități:
+	Aplicația va oferi profesorului următoarele funcționalități:
+
+- Implementarea operațiilor CRUD pentru entitățile Student și Temă. Constrângeri impuse pentru entitatea Tema (ID, descriere, startWeek, deadlineWeek):
+	o startWeek și deadlineWeek să aibă valori întregi de la 1 la 14, startWeek &lt deadlineWeek ;
+	o startWeek – reprezintă săptămâna când a fost adăugată tema (se determină automat (nu se introduce de utilizator) având data curentă și structura anului universitar;
+	o la modificarea termenului de predare pt o temă existentă, deadlineWeek, nr săptămânii curente trebuie sa fie mai mic sau egal decât nr săptămânii cu termenul de predare.
+
+- Adăugarea unei note pentru un anumit student la o temă de laborator va avea în vedere următoarele constrângeri:
+	o Profesorul acordă o notă de la 1 la 10 pentru fiecare temă de laborator.
+	o Predarea unei teme după săptămâna în care este stabilit termenul de predare al temei respective, conduce la diminuarea notei cu 1 punct pentru fiecare săptămână de întârziere.
+	o Eventualele depunctări datorate întârzierilor în predarea unei teme se vor calcula automat, afișându-se nota maximă pe care o poate lua studentul pentru tema respectivă.
+	o Un student, la o tema de laborator, are o singură notă.
+	o După 2 săptămâni de întârziere în predarea unei teme, tema respectivă nu va mai putea fi predată, decât dacă este o situație excepțională: studentul a lipsit motivat.
+	o Se tratează și cazul când profesorul nu a introdus notele la timp.
+
+- La adăugarea unei note se vor adăuga în fișierul NumeStudent (format XML sau JSON sau text) următoarele informații:
+	o ”Tema:” numărul temei
+	o ”Nota:” nota acordată pe tema respectivă
+	o ”Predată în săptămâna:” nr Săptămână în care tema a fost Predată
+	o ”Deadline:” nr Săptămână cu termen limită de predare, Deadline
+	o ”Feedback:” aprecieri, sugestii, precizări în legătură cu depunctările efectuate.
+Exemplu:
+
+Tema: 3
+Nota: 9.5
+Predată în săptămâna: 5
+Deadline: 5
+Feedback:
+
+Tema: 4
+Nota: 8
+Predată în săptămâna: 5
+Deadline: 5
+
+
+- Filtrarea entităților în baza unor criterii
+	o 1: Toți studenții unei grupe
+	o 2: Toți studenții care au predat o anumită temă
+	o 3: Toți studenții care au predat o anumită temă unui profesor anume
+	o 4: Toate notele la o anumită temă, dintr-o săptămână dată
+
+- Rapoarte
+	o 1: Nota la laborator pentru fiecare student (media ponderată a notelor de la temele de laborator; pondere tema=nr de săptămâni alocate temei).
+	o 2: Cea mai grea tema: media notelor la tema respectivă este cea mai mică.
+	o 3: Studenții care pot intra în examen (media mai mare sau egală cu 4).
+	o 4: Studenții care au predat la timp toate temele.
+
+Limbaj programare utilizat: Java
+Editor: IntelliJ

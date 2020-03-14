@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentController">
+   <children>
+      <TableView fx:id="tableView" prefHeight="297.0" prefWidth="600.0" AnchorPane.bottomAnchor="103.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="tableColumnId" prefWidth="75.0" text="Id" />
+          <TableColumn fx:id="tableColumnNume" prefWidth="75.0" text="Nume" />
+            <TableColumn fx:id="tableColumnPrenume" prefWidth="75.0" text="Prenume" />
+            <TableColumn fx:id="tableColumnGrupa" prefWidth="75.0" text="Grupa" />
+            <TableColumn fx:id="tableColumnEmail" prefWidth="75.0" text="Email" />
+            <TableColumn fx:id="tableColumnProfesor" prefWidth="92.0" text="Profesor Laborator" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <HBox alignment="CENTER" layoutX="14.0" layoutY="297.0" prefHeight="76.0" prefWidth="323.0" spacing="10.0">
+         <children>
+            <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#handleSave" text="Adauga" />
+            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#handleDelete" text="Sterge" />
+            <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#handleUpdate" text="Modifica">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+         </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </HBox>
+      <Button fx:id="bntFindOne" layoutX="345.0" layoutY="323.0" mnemonicParsing="false" onAction="#handleFindOne" prefHeight="25.0" prefWidth="71.0" text="Cauta ID" />
+      <TextField fx:id="txtFindOne" layoutX="427.0" layoutY="323.0" />
+      <TextField fx:id="txtSearchName" layoutX="427.0" layoutY="355.0" />
+      <Button fx:id="btnAlege" disable="true" layoutX="355.0" layoutY="355.0" mnemonicParsing="false" onAction="#handleAlege" text="Alege" />
+   </children>
+</AnchorPane>

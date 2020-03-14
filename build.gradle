@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+    id 'application'
+}
+
+group 'lab4_map'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://repo.maven.apache.org/maven2/junit/junit/4.12/junit-4.12.pom'
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+javafx {
+    version = "11.0.2"
+    modules = [ 'javafx.controls' , 'javafx.fxml']
+}

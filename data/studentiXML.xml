@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<entity>
+    <student id="1">
+        <nume>Popescu</nume>
+        <prenume>Luciana</prenume>
+        <grupa>225</grupa>
+        <email>luciana@email</email>
+        <cadruDidacticIndrumatorLab>Dan</cadruDidacticIndrumatorLab>
+    </student>
+    <student id="2">
+        <nume>Bota</nume>
+        <prenume>Mara</prenume>
+        <grupa>223</grupa>
+        <email>mara@email</email>
+        <cadruDidacticIndrumatorLab>Alina</cadruDidacticIndrumatorLab>
+    </student>
+    <student id="3">
+        <nume>Avram</nume>
+        <prenume>Iulian</prenume>
+        <grupa>225</grupa>
+        <email>avram@email</email>
+        <cadruDidacticIndrumatorLab>Dan</cadruDidacticIndrumatorLab>
+    </student>
+    <student id="4">
+        <nume>Popa</nume>
+        <prenume>Raul</prenume>
+        <grupa>222</grupa>
+        <email>raul@yahoo.com</email>
+        <cadruDidacticIndrumatorLab>Dan</cadruDidacticIndrumatorLab>
+    </student>
+</entity>

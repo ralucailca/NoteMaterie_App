@@ -1,0 +1,28 @@
+{Tema =4
+, Nota =6.0
+, Predata in saptamana =10
+, Deadline =10
+, Feedback =
+Nota maxima care poate fi acordata este: 10
+}
+{Tema =4
+, Nota =9.0
+, Predata in saptamana =10
+, Deadline =10
+, Feedback =
+Nota maxima care poate fi acordata este: 10
+}
+{Tema =4
+, Nota =9.0
+, Predata in saptamana =10
+, Deadline =10
+, Feedback =
+Nota maxima care poate fi acordata este: 10
+}
+{Tema =4
+, Nota =9.0
+, Predata in saptamana =10
+, Deadline =10
+, Feedback =
+Nota maxima care poate fi acordata este: 10
+}
